@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=https://spotify.app.link/5vNRhkKd0yEAg8suGBpjeY">
   <title>Redirecting...</title>
   <script type="text/javascript">
-    // Fungsi untuk langsung menekan link
-    window.location.href = "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY?si=FlRZE6vlTwq7jnpHaLvaKA";
+    // Fungsi untuk otomatis mengklik link setelah halaman terbuka
+    window.onload = function() {
+      document.getElementById('auto-click').click(); // Otomatis klik tombol
+    }
   </script>
 </head>
 <body>
-  <!-- Link yang seharusnya di-klik otomatis -->
-  <a href="https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY?si=FlRZE6vlTwq7jnpHaLvaKA" style="display:none;" id="auto-click">Click here</a>
+  <!-- Tampilkan tombol Click Here yang akan otomatis terklik -->
+  <a id="auto-click" href="https://spotify.app.link/5vNRhkKd0yEAg8suGBpjeY" target="_blank">
+    <button>Click Here</button>
+  </a>
 </body>
 </html>
