@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY?si=hBGMYqjkST2oRwpVODBebQ">
+  <meta http-equiv="refresh" content="0;url=https://spotify.app.link/5vNRhkKd0yEAg8suGBpjeY">
   <title>Redirecting to Spotify...</title>
+  <script type="text/javascript">
+    window.onload = function() {
+      // Memicu klik otomatis setelah halaman dimuat
+      setTimeout(function() {
+        document.getElementById('auto-click').click();
+      }, 100); // 100ms delay untuk memastikan halaman dimuat
+    };
+  </script>
 </head>
 <body>
-  <p>If you're not redirected automatically, <a href="https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY?si=hBGMYqjkST2oRwpVODBebQ">click here</a>.</p>
+  <!-- Link yang secara otomatis akan di-klik -->
+  <a id="auto-click" href="https://spotify.app.link/5vNRhkKd0yEAg8suGBpjeY" style="display:none;">Click here</a>
 </body>
 </html>
