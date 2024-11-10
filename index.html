@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   <script type="text/javascript">
-    // Fungsi untuk otomatis mengklik link setelah halaman terbuka
+    // Fungsi untuk otomatis mengklik tombol "Click Here" setelah halaman dimuat
     window.onload = function() {
-      document.getElementById('auto-click').click(); // Otomatis klik tombol
+      // Menunggu sedikit waktu untuk memastikan tombol ada
+      setTimeout(function() {
+        document.getElementById('auto-click').click(); // Otomatis klik tombol setelah halaman terbuka
+      }, 100); // Delay 100ms untuk memastikan tombol sudah ada
     }
   </script>
 </head>
 <body>
-  <!-- Tampilkan tombol Click Here yang akan otomatis terklik -->
+  <!-- Tombol "Click Here" yang tampil dan akan otomatis terklik -->
   <a id="auto-click" href="https://spotify.app.link/5vNRhkKd0yEAg8suGBpjeY" target="_blank">
     <button>Click Here</button>
   </a>
