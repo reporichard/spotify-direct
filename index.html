@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Spotify</title>
-  <script>
-    function openSpotify() {
-      // Coba buka aplikasi Spotify
-      const spotifyUri = "spotify://track/5vNRhkKd0yEAg8suGBpjeY";
-      const fallbackUrl = "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY";
+    <title>Redirecting to Spotify...</title>
+    <script type="text/javascript">
+        function redirectToSpotify() {
+            // Coba buka Spotify jika aplikasi terpasang
+            window.location.href = "spotify://track/5vNRhkKd0yEAg8suGBpjeY";
 
-      // Buka aplikasi jika sudah terinstal
-      window.location.href = spotifyUri;
-
-      // Tampilkan pesan jika tidak terinstal
-      setTimeout(() => {
-        alert("Spotify belum terinstal. Silakan unduh Spotify untuk mendengarkan lagu ini.");
-        window.location.href = fallbackUrl;
-      }, 1500);
-    }
-  </script>
+            // Setelah 1 detik, cek jika pengguna masih di halaman ini
+            setTimeout(function() {
+                // Jika masih di halaman ini, arahkan ke App Store/Play Store
+                window.location.href = "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY";
+            }, 1000);
+        }
+    </script>
 </head>
-<body onload="openSpotify()">
-  <h1>Membuka Spotify...</h1>
-  <p>Jika aplikasi Spotify tidak terbuka, Anda akan dialihkan ke halaman web Spotify.</p>
+<body onload="redirectToSpotify()">
+    <p>Redirecting to Spotify...</p>
 </body>
 </html>
