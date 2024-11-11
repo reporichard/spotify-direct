@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redir...</title>
-  <script type="text/javascript">
-    // Fungsi untuk otomatis mengklik tombol "Click Here" setelah halaman dimuat
-    window.onload = function() {
-      // Menunggu sedikit waktu untuk memastikan tombol ada
-      setTimeout(function() {
-        document.getElementById('auto-click').click(); // Otomatis klik tombol setelah halaman terbuka
-      }, 100); // Delay 100ms untuk memastikan tombol sudah ada
+  <title>Open Spotify</title>
+  <script>
+    function openSpotify() {
+      // Coba buka aplikasi Spotify
+      const spotifyUri = "spotify://track/5vNRhkKd0yEAg8suGBpjeY";
+      const fallbackUrl = "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY";
+
+      // Buka aplikasi jika sudah terinstal
+      window.location.href = spotifyUri;
+
+      // Tampilkan pesan jika tidak terinstal
+      setTimeout(() => {
+        alert("Spotify belum terinstal. Silakan unduh Spotify untuk mendengarkan lagu ini.");
+        window.location.href = fallbackUrl;
+      }, 1500);
     }
   </script>
 </head>
-<body>
-  <!-- Tombol "Click Here" yang tampil dan akan otomatis terklik -->
-  <a id="auto-click" href="https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY?si=FlRZE6vlTwq7jnpHaLvaKA" target="_blank">
-    <button>Click Here</button>
-  </a>
+<body onload="openSpotify()">
+  <h1>Membuka Spotify...</h1>
+  <p>Jika aplikasi Spotify tidak terbuka, Anda akan dialihkan ke halaman web Spotify.</p>
 </body>
 </html>
